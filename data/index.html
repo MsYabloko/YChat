@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yabloko's Chat</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="chat-container">
+
+    <h2 class="chat-header">YChat</h2>
+
+    <div class="chat-messages" id="messages-container">
+    </div>
+
+    <div class="chat-input-form">
+        <div id="chat-input" class="chat-input" role="textbox" aria-multiline="true" contenteditable="true">
+        </div>
+        <button type="button" class="emoji-button">
+            <div class="emoji-menu" id="emoji-menu">
+            </div>
+            <img src="emoji/kolobki/smile.gif"/>
+        </button>
+        <button id="send-button" type="submit" class="button send-button">Отправить</button>
+    </div>
+
+</div>
+
+<div class="login-background" id="login-background">
+    <div class="login-form" id="login-form">
+        <div class="login" id="login">
+            <form>
+                <h1>Вход</h1>
+                <div class="input-box">
+                    <input id="auth-login" type="text" placeholder="Логин" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="auth-password" placeholder="Пароль" required>
+                </div>
+                <div>
+                    <label><input type="checkbox">Запомнить меня</label>
+                </div>
+                <p class="login-error" id="login-error"></p>
+                <button type="button" onclick="auth()" class="btn">Войти</button>
+                <div>
+                    <p>Нет аккаунта? <a id="goto-register">Зарегистрироваться</a> </p>
+                </div>
+            </form>
+        </div>
+        <div class="register" id="register">
+                <h1>Регистрация</h1>
+                <div class="input-box">
+                    <input id="login-reg-input" type="text" oninput="check_register()" placeholder="Логин" required>
+                </div>
+                <div class="input-box">
+                    <input id="name-input" type="text" oninput="check_register()" placeholder="Имя пользователя" required>
+                </div>
+                <div class="input-box" oninput="check_register()">
+                    <input id="password-reg-input" type="password" placeholder="Пароль" required>
+                </div>
+                <div class="input-box">
+                    <input id="repeat-password-input" type="password" oninput="check_register()" placeholder="Повторите пароль" required>
+                </div>
+                <div id="reg-errors" class="reg-errors">
+                    <div class="reg-err" id="wrong-login">Разрешенные в логине символы: латинские буквы, _, -, и цифры</div><
+                    <div class="reg-err" id="wrong-name">Разрешенные в имени символы: латинские буквы, кириллические буквы, спец-символы и цифры</div>
+                    <div class="reg-err" id="wrong-pass">Разрешенные в пароле: латинские буквы, спец-символы и цифры</div><br>
+                    <div class="reg-err" id="occ-login">Этот логин уже занят</div>
+                    <div class="reg-err" id="password-mismatch">Пароли не совпадают</div>
+                    <div class="reg-err" id="empty-name">Пустое имя пользователя</div>
+                    <div class="reg-err" id="empty-password">Пустой пароль</div>
+                    <div class="reg-err" id="empty-login">Пустой логин</div>
+                </div>
+                <button type="button" class="btn" onclick="register()">Зарегистрироваться</button>
+                <div>
+                    <p>Есть аккаунт? <a id="goto-login">Войти</a> </p>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/api.js"></script>
+<script type="text/javascript" src="scripts/emoji.js"></script>
+<script type="text/javascript" src="scripts/messages.js"></script>
+
+<script type="text/javascript" src="scripts/loginform.js"></script>
+
+</body>
+
+</html>

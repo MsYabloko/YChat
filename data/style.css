@@ -1,0 +1,290 @@
+body
+{
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: gray;
+}
+
+.button
+{
+    border: none;
+    padding: 0.625em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.button:hover
+{
+    filter: brightness(0.9);
+}
+.button:active
+{
+    transform: translateY(2px);
+}
+
+.chat-container
+{
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.5em 1.25em;
+    margin: auto;
+    height: 37.5em;
+    max-width: 37.5em;
+    box-shadow: 0 0 1.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+.chat-header
+{
+    margin-bottom: 1em;
+    color: dimgray;
+    font-weight: bold;
+}
+
+.chat-messages
+{
+    height: 23em;
+    overflow-y: scroll;
+    border-radius: 1em;
+    padding: 10px;
+    background-color: lightgray;
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.5);
+    scrollbar-width: none;
+    border: solid 1px gray;
+}
+.chat-messages::-webkit-scrollbar
+{
+    display: none;
+}
+.message
+{
+    padding: 0.625em;
+    border-radius: 1em;
+    margin-bottom: 0.625em;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: white;
+}
+.message-sender
+{
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 0.31em;
+}
+.message-sender img
+{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.message-text
+{
+    font-size: 16px;
+    margin-bottom: 0.31em;
+}
+.message-text .emoji
+{
+    height: 18px;
+}
+.message-timestamp
+{
+    font-size: 0.75em;
+    text-align: right;
+}
+.my
+{
+    border: solid #da5656;
+}
+.other
+{
+    border: solid #3d5365;
+}
+
+.chat-input-form
+{
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+.chat-input
+{
+    padding: 0.625em;
+    border-radius: 0.5em;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 1em;
+    flex-grow: 1;
+    height: 26px;
+    overflow-y: scroll;
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.5);
+    scrollbar-width: none;
+    border: solid 1px gray;
+}
+.chat-input:focus
+{
+    outline: solid 1px;
+}
+.chat-input::-webkit-scrollbar
+{
+    display: none;
+}
+.chat-input .emoji
+{
+    display: inline-block;
+    height: 18px;
+}
+.send-button
+{
+    background-color: #da5656;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 0.625em;
+}
+.emoji-button
+{
+    background-color: transparent;
+    color: white;
+    margin-left: 0.625em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.emoji-button img
+{
+    height: 38px;
+    background-color: transparent;
+    border: none;
+}
+.emoji-menu
+{
+    position: absolute;
+    border-radius: 0.5em;
+    background-color: white;
+    height: 256px;
+    width: 200px;
+    transform: translateY(-256px);
+    display: none;
+    overflow-y: scroll;
+}
+
+.emoji-name
+{
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.emoji-container
+{
+    width: available;
+}
+
+.emoji-container .emoji
+{
+    display: inline-block;
+    float: left;
+    height: 20px;
+    margin: 7px;
+}
+
+.emoji-menu .emoji:hover
+{
+    filter: brightness(0.9);
+}
+
+.emoji-button:hover .emoji-menu
+{
+    display: block;
+    box-shadow: 0 0 1.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+.login-background
+{
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form
+{
+    background-color: white;
+    width: 420px;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.25em 0.5em rgba(0, 0, 0, 0.2);
+    height: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.login,
+.register
+{
+    width: 100%;
+}
+
+.register h1,
+.login h1
+{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #da5656;
+}
+
+.register .input-box,
+.login .input-box
+{
+    width: 100%;
+    height: 35px;
+    margin: 15px 0;
+}
+
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+}
+
+.btn
+{
+    margin-top: 15px;
+    background-color: #da5656;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    height: 35px;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register a,
+.login a
+{
+   color: #da5656;
+    cursor: pointer;
+}
+
+.login-error
+{
+    color: darkred;
+}
+
+.reg-errors
+{
+    color: darkred;
+    border: 2px solid darkred;
+    border-radius: 20px;
+}
